@@ -15,6 +15,8 @@
 asfvolt16-3.7:
 	if [ ! -e "OpenNetworkLinux" ]; then \
 		git clone https://github.com/Lewis-Kang/OpenNetworkLinux.git -b kernel_3.7.10; \
+		rm -rf OpenNetworkLinux/packages/base/any/kernels/3.7/patches/; \
+		tar zxvf patches-gcc5-patch.tar.gz  -C OpenNetworkLinux/packages/base/any/kernels/3.7; \
 		mv build-asfvolt16.sh OpenNetworkLinux; \
 	fi;
 	cd OpenNetworkLinux && git pull && docker/tools/onlbuilder --non-interactive -8 -c ./build-asfvolt16.sh
