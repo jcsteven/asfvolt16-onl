@@ -12,9 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-asfvolt16-3.7:
+asfvolt16-4.14:
 	if [ ! -e "OpenNetworkLinux" ]; then \
-		git clone https://github.com/Lewis-Kang/OpenNetworkLinux.git -b kernel_3.7.10; \
+		git clone https://github.com/jcsteven/OpenNetworkLinux.git -b asxvolt16; \
 		mv build-asfvolt16.sh OpenNetworkLinux; \
 	fi;
 	cd OpenNetworkLinux && git pull && docker/tools/onlbuilder --non-interactive -8 -c ./build-asfvolt16.sh
