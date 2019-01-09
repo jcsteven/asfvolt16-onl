@@ -14,7 +14,7 @@
 
 asfvolt16-4.14:
 	if [ ! -e "OpenNetworkLinux" ]; then \
-		git clone https://github.com/jcsteven/OpenNetworkLinux.git -b asxvolt16; \
+		git clone https://github.com/jcsteven/OpenNetworkLinux.git -b 2019-0103-fixed-tg3; \
 		mv build-asfvolt16.sh OpenNetworkLinux; \
 	fi;
 	cd OpenNetworkLinux && git pull && docker/tools/onlbuilder --non-interactive -8 -c ./build-asfvolt16.sh
